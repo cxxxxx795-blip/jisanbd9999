@@ -52,24 +52,22 @@ nav a{
 nav a:hover{
     color:#00ff66;
 }
-
-/* HERO */
-
 .hero{
-
-    height:650px;
-
+    min-height:100vh;
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
+    padding:20px;
 
     background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+        url("images/banner.png");
 
-    radial-gradient(circle at top,#00ff6635,#050505 70%);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
 
 }
 
