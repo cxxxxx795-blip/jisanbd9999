@@ -126,3 +126,18 @@ setTimeout(()=>{
 console.log("Welcome To JISANBD9999");
 
 },1000);
+const joinBtn=document.querySelector(".joinBtn");
+
+if(joinBtn){
+
+joinBtn.onclick=function(){
+
+document.getElementById("deposit").scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+}
