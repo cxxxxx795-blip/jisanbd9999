@@ -486,3 +486,74 @@ nav a{
 }
 
 }
+/* ===== PREMIUM HERO ===== */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#050505,#111,#050505);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#00ff66;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:.15;
+    animation:floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow{
+
+0%{
+transform:translate(-120px,-60px);
+}
+
+50%{
+transform:translate(120px,60px);
+}
+
+100%{
+transform:translate(-120px,-60px);
+}
+
+}
+
+.heroContent{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+}
+
+.heroContent h1{
+    font-size:80px;
+    color:#00ff66;
+    text-shadow:0 0 30px #00ff66;
+}
+
+.heroContent h2{
+    margin:20px 0;
+    font-size:35px;
+}
+
+.heroContent p{
+    color:#ccc;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.heroButtons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
