@@ -1,3 +1,7 @@
+/* ==========================
+   JISANBD9999 PREMIUM CSS
+========================== */
+
 *{
     margin:0;
     padding:0;
@@ -12,6 +16,7 @@ html{
 body{
     background:#050505;
     color:#fff;
+    overflow-x:hidden;
 }
 
 /* HEADER */
@@ -19,20 +24,20 @@ body{
 header{
     width:100%;
     padding:18px 8%;
-    background:#111;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    background:#111;
     position:sticky;
     top:0;
     z-index:999;
-    box-shadow:0 0 15px rgba(0,255,102,.25);
+    box-shadow:0 0 15px rgba(0,255,100,.3);
 }
 
 .logo{
     color:#00ff66;
-    font-size:30px;
-    font-weight:700;
+    font-size:32px;
+    font-weight:bold;
     text-shadow:0 0 15px #00ff66;
 }
 
@@ -41,6 +46,7 @@ nav a{
     text-decoration:none;
     margin-left:25px;
     transition:.3s;
+    font-size:17px;
 }
 
 nav a:hover{
@@ -50,75 +56,107 @@ nav a:hover{
 /* HERO */
 
 .hero{
-    position:relative;
-    height:600px;
+
+    height:650px;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
-    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8));
-}
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:radial-gradient(circle,#00ff6620,transparent 70%);
-}
+    background:
 
-.heroContent{
-    position:relative;
-    z-index:2;
+    radial-gradient(circle at top,#00ff6635,#050505 70%);
+
 }
 
 .heroContent h3{
+
     letter-spacing:5px;
-    font-size:24px;
+
+    font-size:25px;
+
 }
 
 .heroContent h1{
-    font-size:80px;
+
+    font-size:85px;
+
     color:#00ff66;
+
     text-shadow:0 0 25px #00ff66;
+
     margin:15px 0;
+
 }
 
 .heroContent h2{
+
     font-size:35px;
+
+    margin-bottom:20px;
+
 }
 
 .heroContent p{
-    margin:25px 0;
+
     color:#ddd;
-    font-size:18px;
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
 }
 
 .playBtn{
+
     padding:18px 45px;
-    border:none;
-    border-radius:10px;
+
     background:#00ff66;
+
+    border:none;
+
     color:#000;
+
     font-size:20px;
+
+    border-radius:10px;
+
     cursor:pointer;
+
     transition:.3s;
+
     box-shadow:0 0 20px #00ff66;
+
 }
 
 .playBtn:hover{
+
     transform:scale(1.08);
+
     box-shadow:0 0 40px #00ff66;
+
 }
 
 /* TITLE */
 
 .title{
-    text-align:center;
-    color:#00ff66;
-    font-size:40px;
-    margin-bottom:40px;
-}
 
-/* DEPOSIT */
+    text-align:center;
+
+    color:#00ff66;
+
+    font-size:42px;
+
+    margin-bottom:40px;
+
+}
+/* ==========================
+   DEPOSIT SECTION
+========================== */
 
 .deposit{
     padding:80px 10%;
@@ -128,92 +166,122 @@ nav a:hover{
     max-width:500px;
     margin:auto;
     background:#111;
-    padding:35px;
-    border-radius:20px;
     border:2px solid #00ff66;
-    box-shadow:0 0 25px #00ff66;
+    border-radius:20px;
+    padding:35px;
     text-align:center;
+    box-shadow:0 0 25px rgba(0,255,102,.5);
+}
+
+.box h3{
+    font-size:24px;
+    margin-bottom:10px;
 }
 
 .box h1{
     color:#00ff66;
-    margin:20px 0;
+    margin-bottom:25px;
+    text-shadow:0 0 10px #00ff66;
 }
 
 .box input{
     width:100%;
     padding:15px;
     margin:12px 0;
-    background:#222;
     border:none;
     outline:none;
-    border-radius:8px;
-    color:white;
+    border-radius:10px;
+    background:#222;
+    color:#fff;
+    font-size:16px;
+}
+
+.box input::placeholder{
+    color:#aaa;
 }
 
 .box button{
     width:100%;
     padding:15px;
+    margin-top:15px;
     border:none;
+    border-radius:10px;
     background:#00ff66;
     color:#000;
     font-size:18px;
-    border-radius:10px;
+    font-weight:bold;
     cursor:pointer;
     transition:.3s;
 }
 
 .box button:hover{
     background:#00dd55;
+    box-shadow:0 0 20px #00ff66;
 }
 
-/* GAMES */
+/* ==========================
+   GAMES
+========================== */
 
 .games{
-    padding:80px 8%;
+    width:90%;
+    margin:80px auto;
 }
 
 .gameGrid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
 .card{
     background:#111;
-    border-radius:15px;
+    border-radius:18px;
     overflow:hidden;
     transition:.4s;
     cursor:pointer;
+    border:1px solid #222;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 25px #00ff66;
+    box-shadow:0 0 25px rgba(0,255,102,.5);
+}
+
+.card::before{
+    content:"🎮";
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:220px;
+    font-size:90px;
+    background:linear-gradient(135deg,#00ff66,#008844);
 }
 
 .card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    background:#222;
+    display:none;
 }
 
 .card h3{
     text-align:center;
-    padding-top:18px;
+    padding:18px 10px 8px;
+    font-size:22px;
 }
 
 .card p{
     text-align:center;
     color:#00ff66;
-    padding:15px 0 20px;
+    padding-bottom:20px;
+    font-weight:bold;
 }
-
-/* ABOUT */
+/* ==========================
+   ABOUT SECTION
+========================== */
 
 .about{
-    padding:80px 10%;
+    width:90%;
+    margin:80px auto;
 }
 
 .aboutBox{
@@ -225,19 +293,35 @@ nav a:hover{
 .aboutBox div{
     background:#111;
     padding:30px;
-    border-radius:15px;
+    border-radius:18px;
     text-align:center;
-    transition:.3s;
+    transition:.4s;
+    border:1px solid #222;
 }
 
 .aboutBox div:hover{
-    box-shadow:0 0 20px #00ff66;
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(0,255,102,.5);
 }
 
-/* CONTACT */
+.aboutBox h3{
+    color:#00ff66;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.aboutBox p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+/* ==========================
+   CONTACT
+========================== */
 
 .contact{
-    padding:70px 10%;
+    width:90%;
+    margin:80px auto;
     text-align:center;
 }
 
@@ -246,50 +330,159 @@ nav a:hover{
     font-size:20px;
 }
 
-/* FOOTER */
+.contact strong{
+    color:#00ff66;
+}
+
+/* ==========================
+   FOOTER
+========================== */
 
 footer{
     background:#111;
     padding:25px;
     text-align:center;
     color:#bbb;
+    border-top:1px solid #222;
 }
 
-/* MOBILE */
+/* ==========================
+   SCROLL BAR
+========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff66;
+    border-radius:20px;
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+.card,
+.box,
+.aboutBox div{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.playBtn{
+    animation:glow 2s infinite;
+}
+
+@keyframes glow{
+
+    0%{
+        box-shadow:0 0 10px #00ff66;
+    }
+
+    50%{
+        box-shadow:0 0 35px #00ff66;
+    }
+
+    100%{
+        box-shadow:0 0 10px #00ff66;
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
 
 @media(max-width:768px){
 
 header{
+
     flex-direction:column;
+
+    padding:20px;
+
 }
 
 nav{
+
     margin-top:15px;
+
 }
 
 nav a{
-    margin:8px;
+
     display:inline-block;
+
+    margin:8px;
+
 }
 
 .hero{
+
     height:500px;
+
+    padding:20px;
+
 }
 
 .heroContent h1{
+
     font-size:45px;
+
 }
 
 .heroContent h2{
+
     font-size:24px;
+
+}
+
+.heroContent h3{
+
+    font-size:18px;
+
+}
+
+.heroContent p{
+
+    font-size:16px;
+
 }
 
 .title{
+
     font-size:30px;
+
 }
 
 .playBtn{
-    padding:15px 30px;
+
+    width:100%;
+
+}
+
+.box{
+
+    padding:25px;
+
 }
 
 }
