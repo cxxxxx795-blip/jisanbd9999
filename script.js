@@ -4,15 +4,16 @@
 
 const playBtn = document.querySelector(".playBtn");
 
-if(playBtn){
+if (playBtn) {
 
-playBtn.onclick = function(){
+    playBtn.addEventListener("click", function () {
 
-alert("🎮 Welcome to JISANBD9999");
+        alert("🎮 Welcome to JISANBD9999!");
 
-};
+    });
 
 }
+
 
 // ==========================
 // DEPOSIT BUTTON
@@ -20,50 +21,51 @@ alert("🎮 Welcome to JISANBD9999");
 
 const depositBtn = document.querySelector(".depositBtn");
 
-if(depositBtn){
+if (depositBtn) {
 
-depositBtn.onclick = function(){
+    depositBtn.addEventListener("click", function () {
 
-document.getElementById("deposit").scrollIntoView({
+        document.getElementById("deposit").scrollIntoView({
 
-behavior:"smooth"
+            behavior: "smooth"
 
-});
+        });
 
-};
+    });
 
 }
-
 // ==========================
-// SUBMIT DEPOSIT
+// DEPOSIT FORM
 // ==========================
 
-const submitBtn = document.querySelector(".depositBox button");
+const submitBtn = document.querySelector(".submitBtn");
 
-if(submitBtn){
+if (submitBtn) {
 
-submitBtn.onclick = function(){
+    submitBtn.addEventListener("click", function () {
 
-const amount = document.querySelector('input[type="number"]').value;
+        const amount = document.querySelector('input[type="number"]').value.trim();
 
-const trx = document.querySelector('input[type="text"]').value;
+        const trx = document.querySelector('input[type="text"]').value.trim();
 
-if(amount==="" || trx===""){
+        if (amount === "" || trx === "") {
 
-alert("❌ Please fill in all information.");
+            alert("❌ Please enter Amount and Transaction ID.");
 
-return;
+            return;
+
+        }
+
+        alert(
+            "✅ Deposit Request Submitted!\n\n" +
+            "Amount: " + amount + " TK\n" +
+            "Transaction ID: " + trx
+        );
+
+    });
 
 }
 
-alert(
-"✅ Deposit Request Submitted!\n\nAmount: "+amount+
-"\nTransaction ID: "+trx
-);
-
-};
-
-}
 
 // ==========================
 // GAME BUTTONS
@@ -73,30 +75,42 @@ const gameButtons = document.querySelectorAll(".card button");
 
 gameButtons.forEach(function(btn){
 
-btn.onclick = function(){
+    btn.addEventListener("click", function(){
 
-alert("🎮 Game will be available soon!");
+        alert("🎮 Game Coming Soon!");
+
+    });
+
+});
+
+
+// ==========================
+// HEADER EFFECT
+// ==========================
+
+window.addEventListener("scroll", function(){
+
+    const header = document.querySelector("header");
+
+    if(window.scrollY > 50){
+
+        header.style.boxShadow = "0 0 20px rgba(0,255,102,.5)";
+
+    }else{
+
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+
+// ==========================
+// PAGE LOADED
+// ==========================
+
+window.onload = function(){
+
+    console.log("JISANBD9999 Loaded Successfully");
 
 };
-
-});
-
-// ==========================
-// HEADER SHADOW
-// ==========================
-
-window.addEventListener("scroll",function(){
-
-const header=document.querySelector("header");
-
-if(window.scrollY>80){
-
-header.style.boxShadow="0 0 25px rgba(0,255,102,.35)";
-
-}else{
-
-header.style.boxShadow="none";
-
-}
-
-});
