@@ -1,81 +1,96 @@
-// ==========================
+// ==============================
 // PLAY BUTTON
-// ==========================
+// ==============================
 
 const playBtn = document.querySelector(".playBtn");
 
 if (playBtn) {
-
     playBtn.addEventListener("click", function () {
-
         alert("🎮 Welcome to JISANBD9999!");
-
     });
-
 }
 
 
-// ==========================
-// DEPOSIT BUTTON
-// ==========================
+// ==============================
+// DEPOSIT BUTTON SCROLL
+// ==============================
 
 const depositBtn = document.querySelector(".depositBtn");
 
 if (depositBtn) {
-
     depositBtn.addEventListener("click", function () {
-
-        document.getElementById("deposit").scrollIntoView({
-
+        document.querySelector("#deposit").scrollIntoView({
             behavior: "smooth"
-
         });
-
     });
-
 }
-// ==========================
+
+
+// ==============================
 // DEPOSIT FORM
-// ==========================
+// ==============================
 
-const submitBtn = document.querySelector(".submitBtn");
+const depositSubmit = document.querySelector(".submitDeposit");
 
-if (submitBtn) {
+if (depositSubmit) {
 
-    submitBtn.addEventListener("click", function () {
+    depositSubmit.addEventListener("click", function () {
 
-        const amount = document.querySelector('input[type="number"]').value.trim();
-
-        const trx = document.querySelector('input[type="text"]').value.trim();
+        const amount = document.querySelector("#deposit input[type='number']").value;
+        const trx = document.querySelector("#deposit input[type='text']").value;
 
         if (amount === "" || trx === "") {
 
-            alert("❌ Please enter Amount and Transaction ID.");
+            alert("❌ Please fill all Deposit information.");
 
             return;
 
         }
 
-        alert(
-            "✅ Deposit Request Submitted!\n\n" +
-            "Amount: " + amount + " TK\n" +
-            "Transaction ID: " + trx
-        );
+        alert("✅ Deposit Request Submitted Successfully!");
 
     });
 
 }
 
 
-// ==========================
-// GAME BUTTONS
-// ==========================
+// ==============================
+// WITHDRAW FORM
+// ==============================
+
+const withdrawSubmit = document.querySelector(".submitWithdraw");
+
+if (withdrawSubmit) {
+
+    withdrawSubmit.addEventListener("click", function () {
+
+        const amount = document.querySelector("#withdraw input[type='number']").value;
+        const number = document.querySelector("#withdraw input[type='text']").value;
+
+        if (amount === "" || number === "") {
+
+            alert("❌ Please fill all Withdraw information.");
+
+            return;
+
+        }
+
+        alert("✅ Withdraw Request Submitted Successfully!");
+
+    });
+
+}
+
+
+// ==============================
+// GAME BUTTON
+// ==============================
 
 const gameButtons = document.querySelectorAll(".card button");
 
-gameButtons.forEach(function(btn){
+gameButtons.forEach(function(button){
 
-    btn.addEventListener("click", function(){
+    button.addEventListener("click", function(){
 
         alert("🎮 Game Coming Soon!");
 
@@ -84,9 +99,9 @@ gameButtons.forEach(function(btn){
 });
 
 
-// ==========================
-// HEADER EFFECT
-// ==========================
+// ==============================
+// HEADER SHADOW
+// ==============================
 
 window.addEventListener("scroll", function(){
 
@@ -94,7 +109,7 @@ window.addEventListener("scroll", function(){
 
     if(window.scrollY > 50){
 
-        header.style.boxShadow = "0 0 20px rgba(0,255,102,.5)";
+        header.style.boxShadow = "0 0 25px #00ff66";
 
     }else{
 
@@ -105,12 +120,12 @@ window.addEventListener("scroll", function(){
 });
 
 
-// ==========================
+// ==============================
 // PAGE LOADED
-// ==========================
+// ==============================
 
 window.onload = function(){
 
-    console.log("JISANBD9999 Loaded Successfully");
+    console.log("JISANBD9999 Loaded Successfully 🚀");
 
 };
